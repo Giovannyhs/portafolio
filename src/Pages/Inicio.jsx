@@ -3,29 +3,22 @@ import Luna from "../Componentes/Luna3D";
 import Back from "../Componentes/Back";
 import Header from "../Componentes/Header";
 import Footer from "../Componentes/Footer";
+import "../Style/Inicio.css";
 
 function Inicio() {
   return (
     <div className="Inicio_container">
       <Header />
-      <Footer />
       <Back />
       <Luna />
-      <h2>hola</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vero
-        perspiciatis non temporibus aliquid sequi beatae molestias, a dolorum
-        nisi id, iste repudiandae porro alias quisquam? Fugit, iusto facilis.
-        Odit.
-      </p>
+      <Footer />
+
       <div className="inicio">
-        <h2>hola</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vero
-          perspiciatis non temporibus aliquid sequi beatae molestias, a dolorum
-          nisi id, iste repudiandae porro alias quisquam? Fugit, iusto facilis.
-          Odit.
-        </p>
+        <img className="foto" src="./Imagenes/foto.png" alt="" />
+        <h2 className="saludo">
+          HOLA, SOY GUIOVANI HERNANDEZ <br />
+          DESARROLLADOR FRONTEND
+        </h2>
       </div>
     </div>
   );

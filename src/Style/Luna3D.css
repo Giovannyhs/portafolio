@@ -1,0 +1,6 @@
+#luna-container {
+  display: flex;
+  margin-top: -20%;
+  margin-left: -40%;
+  z-index: -1;
+}

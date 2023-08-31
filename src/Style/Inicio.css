@@ -1,0 +1,15 @@
+.inicio {
+  color: blueviolet;
+  background-color: aqua;
+  height: 100px;
+  z-index: 2;
+}
+h2 {
+  color: rgb(158, 94, 10);
+  font-size: 50px;
+
+  text-align: center;
+}
+p {
+  color: aqua;
+}

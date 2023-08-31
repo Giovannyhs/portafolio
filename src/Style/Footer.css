@@ -1,0 +1,41 @@
+#footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 35%;
+}
+#footer_li {
+  position: relative;
+  list-style: none;
+  float: left;
+  padding: 10px;
+}
+#footer_a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  display: block;
+
+  float: left;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: width 0.5s;
+  box-sizing: border-box;
+}
+#footer_li:hover #footer_a {
+  width: 100%;
+  height: 100%;
+}
+#iconos_1 {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+span {
+  color: #fff;
+  padding-left: 10px;
+  margin-top: -5px;
+}

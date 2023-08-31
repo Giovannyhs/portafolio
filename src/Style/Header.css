@@ -1,0 +1,48 @@
+.logo {
+  display: flex;
+  height: 100px;
+  justify-content: right;
+  position: relative;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 170px 0 0 50px;
+}
+.header_li {
+  position: relative;
+  list-style: none;
+  float: left;
+  padding: 10px;
+}
+.header_a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  display: block;
+  float: left;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: width 0.5s;
+  box-sizing: border-box;
+}
+.header_li:hover .header_a {
+  width: 155px;
+}
+.iconos {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+span {
+  color: #fff;
+  padding-left: 10px;
+}

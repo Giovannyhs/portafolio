@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   transform: rotate(230deg);
+  z-index: -1;
 }
 
 .star {

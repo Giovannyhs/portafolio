@@ -7,25 +7,25 @@ const Header = () => {
       <img className="logo" src="imagenes/logo.svg" alt="" />
       <ul className="header">
         <li className="header_li">
-          <a className="header_a" href="">
+          <a className="header_a" href="/Inicio">
             <img className="iconos" src="imagenes/home.svg" alt="" />
             <span>INICIO</span>
           </a>
         </li>
         <li className="header_li">
-          <a className="header_a" href="">
+          <a className="header_a" href="/Sobre">
             <img className="iconos" src="imagenes/about.svg" alt="" />
             <span>SOBRE MI</span>
           </a>
         </li>
         <li className="header_li">
-          <a className="header_a" href="">
+          <a className="header_a" href="/Tecnologias">
             <img className="iconos" src="imagenes/tecnologias.svg" alt="" />
             <span>TECNOLOGIAS</span>
           </a>
         </li>
         <li className="header_li">
-          <a className="header_a" href="">
+          <a className="header_a" href="/Proyectos">
             <img className="iconos" src="imagenes/proyectos.svg" alt="" />
             <span>PROYECTOS</span>
           </a>

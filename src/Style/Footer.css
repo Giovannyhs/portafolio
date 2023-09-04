@@ -12,11 +12,9 @@
 #footer_a {
   width: 30px;
   height: 30px;
-  line-height: 30px;
   overflow: hidden;
-  display: block;
-
-  float: left;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   text-decoration: none;
   transition: width 0.5s;
@@ -37,5 +35,4 @@
 span {
   color: #fff;
   padding-left: 10px;
-  margin-top: -5px;
 }

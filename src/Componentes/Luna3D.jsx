@@ -36,9 +36,9 @@ const Luna3D = () => {
       sphere = new THREE.Mesh(geometry, material);
       scene.add(sphere);
 
-      camera.position.z = 2;
+      camera.position.z = 3;
 
-      sphere.position.x = 3.3; // Deja la esfera en el centro horizontal
+      sphere.position.x = 3; // Deja la esfera en el centro horizontal
       sphere.position.y = 0.2; // Mueve la esfera hacia abajo
     };
 

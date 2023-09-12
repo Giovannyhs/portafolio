@@ -3,6 +3,11 @@ import "../Style/Footer.css";
 
 const Footer = () => {
   const linkedinUrl = "https://www.linkedin.com/in/guiovanihernandez";
+  const torreUrl =
+    "https://torre.ai/guiovanihernandezsegura?column=about&r=xy4RGPyO";
+  const githubUrl = "https://github.com/Giovannyhs";
+  const whatsappUrl =
+    "https://wa.me/573227010840?text=Hola,%20Gracias%20por%20contactarme%20por%20este%20medio";
   return (
     <ul id="footer">
       <li id="footer_li">
@@ -29,19 +34,34 @@ const Footer = () => {
         </a>
       </li>
       <li id="footer_li">
-        <a id="footer_a" href="#">
+        <a
+          id="footer_a"
+          href={torreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img id="iconos_1" src="./Imagenes/torre.svg" alt="" />
           <span>Torre</span>
         </a>
       </li>
       <li id="footer_li">
-        <a id="footer_a" href="#">
+        <a
+          id="footer_a"
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img id="iconos_1" src="./Imagenes/github.svg" alt="" />
           <span>GitHub</span>
         </a>
       </li>
       <li id="footer_li">
-        <a id="footer_a" href="#">
+        <a
+          id="footer_a"
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img id="iconos_1" src="./Imagenes/whatsapp.svg" alt="" />
           <span>Whatsapp</span>
         </a>

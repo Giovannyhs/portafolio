@@ -13,7 +13,7 @@ const Luna3D = () => {
       camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth / window.innerHeight,
-        0.2,
+        0.1,
         1000
       );
       renderer = new THREE.WebGLRenderer();
@@ -38,7 +38,7 @@ const Luna3D = () => {
 
       camera.position.z = 2;
 
-      sphere.position.x = 2.8; // Deja la esfera en el centro horizontal
+      sphere.position.x = 3; // Deja la esfera en el centro horizontal
       sphere.position.y = 0.2; // Mueve la esfera hacia abajo
     };
 

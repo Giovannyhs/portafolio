@@ -14,7 +14,7 @@ function Inicio() {
       <Footer />
 
       <div className="inicio">
-        <img className="foto" src="./Imagenes/foto.png" alt="" />
+        <img className="foto" src="./Imagenes/foto.jpg" alt="" />
         <h2 className="saludo">
           HOLA, SOY GUIOVANI HERNANDEZ <br />
           DESARROLLADOR FRONTEND

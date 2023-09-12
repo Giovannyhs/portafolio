@@ -24,7 +24,7 @@
   height: 30px;
   line-height: 30px;
   overflow: hidden;
-  display: block;
+  display: flex;
   float: left;
   white-space: nowrap;
   text-decoration: none;

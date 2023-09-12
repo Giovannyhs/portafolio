@@ -2,10 +2,16 @@ import React from "react";
 import "../Style/Footer.css";
 
 const Footer = () => {
+  const linkedinUrl = "https://www.linkedin.com/in/guiovanihernandez";
   return (
     <ul id="footer">
       <li id="footer_li">
-        <a id="footer_a" href="#">
+        <a
+          id="footer_a"
+          href={linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             id="iconos"
             src="./Imagenes/linkedin.svg"

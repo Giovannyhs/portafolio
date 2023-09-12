@@ -8,6 +8,7 @@ const Footer = () => {
   const githubUrl = "https://github.com/Giovannyhs";
   const whatsappUrl =
     "https://wa.me/573227010840?text=Hola,%20Gracias%20por%20contactarme%20por%20este%20medio";
+
   return (
     <ul id="footer">
       <li id="footer_li">

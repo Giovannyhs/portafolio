@@ -17,7 +17,7 @@ const Luna3D = () => {
         1000
       );
       renderer = new THREE.WebGLRenderer();
-      renderer.setSize(2000, 800);
+      renderer.setSize(1500, 800);
 
       const lunaContainer = document.getElementById("luna-container");
       lunaContainer.appendChild(renderer.domElement);
@@ -38,7 +38,7 @@ const Luna3D = () => {
 
       camera.position.z = 2;
 
-      sphere.position.x = -0.5; // Deja la esfera en el centro horizontal
+      sphere.position.x = -1.5; // Deja la esfera en el centro horizontal
       sphere.position.y = 0.2; // Mueve la esfera hacia abajo
     };
 

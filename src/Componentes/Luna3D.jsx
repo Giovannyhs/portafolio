@@ -39,7 +39,7 @@ const Luna3D = () => {
       camera.position.z = 3;
 
       sphere.position.x = 4; // Deja la esfera en el centro horizontal
-      sphere.position.y = 0.4; // Mueve la esfera hacia abajo
+      sphere.position.y = 0.6; // Mueve la esfera hacia abajo
     };
 
     const animate = () => {

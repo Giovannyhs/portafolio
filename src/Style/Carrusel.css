@@ -1,0 +1,64 @@
+.carrusel {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 50vh;
+  max-width: 630px;
+}
+.carrusel i {
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carrusel i:first-child {
+  display: none;
+}
+.tarjetas {
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.tarjetas.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.tarjetas.dragging img {
+  pointer-events: none;
+}
+.tarjetas img {
+  height: 200px;
+  object-fit: cover;
+  margin-left: 25px;
+
+  width: cal(100% / 3);
+}
+.tarjetas img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .tarjetas img {
+    width: cal(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carrusel {
+    margin: 0 40px;
+  }
+  .tarjetas img {
+    width: 90%;
+    height: 100%;
+  }
+  .carrusel i {
+    width: 40px;
+  }
+}

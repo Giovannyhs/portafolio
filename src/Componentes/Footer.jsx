@@ -8,6 +8,7 @@ const Footer = () => {
   const githubUrl = "https://github.com/Giovannyhs";
   const whatsappUrl =
     "https://wa.me/573227010840?text=Hola,%20Gracias%20por%20contactarme%20por%20este%20medio";
+  const emailAddress = "mailto:giovannyhs@outlook.com"; // Usar "mailto:" para abrir el cliente de correo
 
   return (
     <ul id="footer">
@@ -29,7 +30,11 @@ const Footer = () => {
         </a>
       </li>
       <li id="footer_li">
-        <a id="footer_a" href="#">
+        <a
+          id="footer_a"
+          href={emailAddress} // Usar "mailto:" para abrir el cliente de correo
+          rel="noopener noreferrer"
+        >
           <img id="iconos_1" src="./Imagenes/email.svg" alt="" />
           <span>Email</span>
         </a>

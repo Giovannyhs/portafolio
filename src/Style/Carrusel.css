@@ -7,7 +7,7 @@
   min-height: 50vh;
   max-width: 630px;
 }
-.carrusel i {
+.carrusel .i {
   height: 30px;
   width: 80px;
   text-align: center;
@@ -17,7 +17,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.carrusel i:first-child {
+.carrusel .i.hidden {
   display: none;
 }
 .tarjetas {
@@ -58,7 +58,7 @@
     width: 90%;
     height: 100%;
   }
-  .carrusel i {
+  .carrusel .i {
     width: 40px;
   }
 }

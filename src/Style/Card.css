@@ -1,0 +1,41 @@
+.card {
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  width: 200px;
+  height: 400px;
+}
+.imagenes {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+.nombre {
+  color: #fff;
+  text-align: center;
+}
+.descrip {
+  color: #fff;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.btn-link {
+  background-color: rgb(47, 44, 44);
+  color: #fff;
+  padding: auto;
+  width: 70px;
+  height: 25px;
+  margin-left: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.btn-link:hover {
+  background-color: #fff;
+  color: black;
+}

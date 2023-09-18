@@ -43,7 +43,7 @@ function Proyectos() {
       description:
         "Portafolio, es una pagina donde pueden encontrar informacion sobre mi y ver los proyectos en los que é trabajado.",
       link1: "https://github.com/Giovannyhs/portafolio",
-      link2: "https://deploy-preview-16--wheel-of-doom-colombia.netlify.app/",
+      link2: "https://portafolio-giovannyhs.vercel.app/",
     },
   ];
   return (

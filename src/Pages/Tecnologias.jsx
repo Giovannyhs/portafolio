@@ -11,12 +11,12 @@ function Tecnologias() {
       <Header />
       <Back />
       <Luna />
-      <Footer />
 
       <div className="inicio">
         <h2 className="saludo">TECNOLOGIAS</h2>
       </div>
       <Carrusel />
+      <Footer />
     </div>
   );
 }

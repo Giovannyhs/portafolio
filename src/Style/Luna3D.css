@@ -5,3 +5,8 @@
   position: absolute;
   z-index: -2;
 }
+@media (max-width: 425px) {
+  #luna-container {
+    display: none;
+  }
+}

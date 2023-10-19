@@ -6,6 +6,8 @@
   margin: auto;
   min-height: 50vh;
   max-width: 630px;
+  margin-top: -130px;
+  margin-bottom: 60px;
 }
 .carrusel .i {
   height: 30px;
@@ -44,21 +46,8 @@
   margin-left: 0px;
 }
 
-@media screen and (max-width: 900px) {
-  .tarjetas img {
-    width: cal(100% / 2);
-  }
-}
-
-@media screen and (max-width: 550px) {
+@media (max-width: 425px) {
   .carrusel {
-    margin: 0 40px;
-  }
-  .tarjetas img {
-    width: 90%;
-    height: 100%;
-  }
-  .carrusel .i {
-    width: 40px;
+    margin: -100px 55px 80px;
   }
 }

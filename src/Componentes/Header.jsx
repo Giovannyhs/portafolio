@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/Header.css";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <img className="logo" src="./Imagenes/logo.svg" alt="" />
-      <ul className="header">
+      <div
+        className={`menu-toggle ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <ul className={`header ${isOpen ? "open" : ""}`}>
         <li className="header_li">
           <a className="header_a" href="/Inicio">
             <img className="iconos" src="./Imagenes/home.svg" alt="" />

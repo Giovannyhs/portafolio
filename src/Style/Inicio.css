@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -40%;
+  margin-bottom: 120px;
+
   z-index: 1;
 }
 .foto {
@@ -11,9 +12,23 @@
   height: 300px;
   border-radius: 180px;
 }
-.saludo {
+.saludo_1 {
   color: #fff;
   text-align: center;
   font-size: xx-large;
   line-height: 55px;
+}
+@media (max-width: 425px) {
+  .inicio {
+    margin-top: 80px;
+  }
+  .foto {
+    width: 200px;
+    height: 200px;
+  }
+  .saludo_1 {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px 30px -50px 30px;
+  }
 }

@@ -51,7 +51,6 @@ function Proyectos() {
       <Header />
       <Back />
       <Luna />
-      <Footer />
 
       <div className="inicio">
         <h2 className="saludo">PROYECTOS</h2>
@@ -61,6 +60,7 @@ function Proyectos() {
           <Card key={tarjeta.id} {...tarjeta} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

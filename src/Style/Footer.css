@@ -1,7 +1,6 @@
 #footer {
   display: flex;
   justify-content: center;
-  margin-top: 35%;
 }
 #footer_li {
   position: relative;
@@ -35,4 +34,9 @@
 span {
   color: #fff;
   padding-left: 10px;
+}
+@media (max-width: 425px) {
+  #footer {
+    margin: 0 0 10px -20px;
+  }
 }

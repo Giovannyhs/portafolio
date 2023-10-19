@@ -11,15 +11,15 @@ function Inicio() {
       <Header />
       <Back />
       <Luna />
-      <Footer />
 
       <div className="inicio">
         <img className="foto" src="./Imagenes/foto.jpg" alt="" />
-        <h2 className="saludo">
+        <h2 className="saludo_1">
           HOLA, SOY GUIOVANI HERNANDEZ <br />
           DESARROLLADOR FRONTEND
         </h2>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -11,7 +11,6 @@ function Sobre() {
       <Header />
       <Back />
       <Luna />
-      <Footer />
 
       <div className="inicio">
         <h2 className="saludo">SOBRE Mi</h2>
@@ -26,6 +25,7 @@ function Sobre() {
           eficaz aumentando la productividad y el crecimiento colectivo.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

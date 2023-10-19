@@ -1,3 +1,4 @@
+/* Estilos para la barra de navegación */
 .logo {
   display: flex;
   height: 100px;
@@ -7,18 +8,21 @@
   margin-right: 50px;
   margin-top: 50px;
 }
+
 .header {
   display: flex;
   flex-direction: column;
   position: absolute;
   margin: 170px 0 0 50px;
 }
+
 .header_li {
   position: relative;
   list-style: none;
   float: left;
   padding: 10px;
 }
+
 .header_a {
   width: 30px;
   height: 30px;
@@ -31,18 +35,102 @@
   transition: width 0.5s;
   box-sizing: border-box;
 }
+
 .header_li:hover .header_a {
   width: 155px;
 }
+
 .iconos {
   width: 30px;
   height: 30px;
   line-height: 30px;
   text-align: center;
-  color: #fff;
+
   box-sizing: border-box;
 }
+
 span {
   color: #fff;
   padding-left: 10px;
+}
+
+/* Estilos para el menú hamburguesa en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  margin-top: -55px;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.bar {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-3px, -4px);
+}
+
+@media (max-width: 425px) {
+  .logo {
+    margin-right: 30px;
+    margin-top: 20px;
+    height: 80px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header {
+    display: none;
+    background: #ffff;
+
+    width: 100%;
+    height: 50%;
+    margin-left: 0%;
+    margin-top: 30px;
+    z-index: 3;
+  }
+  .header_a {
+    width: 100%;
+    justify-content: center;
+    font-size: x-large;
+    margin-left: -70px;
+  }
+  .header.open {
+    display: flex;
+  }
+  .iconos {
+    display: none;
+  }
+
+  .header.open li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .header.open span {
+    width: 200px;
+    background-color: #000;
+    border-radius: 15px;
+    color: #fff; /* Texto negro en modo responsivo */
+  }
 }

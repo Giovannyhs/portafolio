@@ -1,8 +1,24 @@
+.saludo {
+  color: #fff;
+  text-align: center;
+  font-size: xx-large;
+  line-height: 55px;
+}
 .sobre_mi {
   color: antiquewhite;
   justify-content: center;
   align-self: center;
   font-size: 30px;
   text-align: justify;
-  margin: 0 350px 0px 350px;
+  margin: 0 350px 80px 350px;
+}
+@media (max-width: 425px) {
+  .saludo {
+    margin-top: -40px;
+    color: #fff;
+  }
+  .sobre_mi {
+    font-size: 20px;
+    margin: 0 40px -80px;
+  }
 }

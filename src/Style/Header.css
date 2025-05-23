@@ -5,7 +5,7 @@
   justify-content: right;
   position: relative;
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: 150px;
   margin-top: 50px;
 }
 
@@ -94,11 +94,16 @@ span {
   }
   .menu-toggle {
     display: flex;
+    margin-left: 15%;
+    z-index: 3;
   }
-
+  .menu-toggle .bar {
+    background-color: black;
+    z-index: 3;
+  }
   .header {
     display: none;
-    background: #ffff;
+    background: #adabab;
 
     width: 100%;
     height: 50%;

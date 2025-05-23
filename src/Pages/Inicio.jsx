@@ -7,7 +7,10 @@ import "../Style/Inicio.css";
 
 function Inicio() {
   return (
-    <div className="Inicio_container">
+    <div
+      className="Inicio_container"
+      style={{ position: "relative", overflow: "hidden" }}
+    >
       <Header />
       <Back />
       <Luna />

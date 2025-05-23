@@ -1,76 +1,59 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import "../Style/Luna3D.css";
 
 const Luna3D = () => {
-  const imgPath = "./Imagenes/luna.svg"; // Ruta de la imagen de la luna
+  const containerRef = useRef();
 
   useEffect(() => {
-    let scene, camera, renderer, sphere;
+    let scene, camera, renderer, sphere, frameId;
 
-    const init = () => {
+    const initScene = () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const size = container.clientWidth;
+
       scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-      renderer = new THREE.WebGLRenderer();
-      renderer.setSize(1500, 800);
+      camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({ alpha: true });
+      renderer.setSize(size, size);
+      renderer.setClearColor(0x000000, 0);
+      container.innerHTML = "";
+      container.appendChild(renderer.domElement);
 
-      const lunaContainer = document.getElementById("luna-container");
-      lunaContainer.appendChild(renderer.domElement);
-
-      // Carga la textura de la luna
-      const textureLoader = new THREE.TextureLoader();
-      const texture = textureLoader.load(imgPath);
-
-      // Crea la esfera con la textura
+      const texture = new THREE.TextureLoader().load("/Imagenes/luna.svg");
       const geometry = new THREE.SphereGeometry(1, 32, 32);
       const material = new THREE.MeshBasicMaterial({
         map: texture,
-        transparent: true, // Hacer el material transparente
-        opacity: 1, // Establecer la opacidad en 1 (no transparente)
+        transparent: true,
       });
+
       sphere = new THREE.Mesh(geometry, material);
       scene.add(sphere);
-
       camera.position.z = 3;
+      sphere.position.set(0, -0.5, 0);
 
-      sphere.position.x = 4; // Deja la esfera en el centro horizontal
-      sphere.position.y = 0.6; // Mueve la esfera hacia abajo
-    };
-
-    const animate = () => {
-      if (sphere) {
-        // Verificar si la esfera está inicializada antes de acceder a sus propiedades
+      const animate = () => {
         sphere.rotation.y += 0.005;
         renderer.render(scene, camera);
-      }
+        frameId = requestAnimationFrame(animate);
+      };
 
-      requestAnimationFrame(animate);
+      animate();
     };
 
-    // Iniciar la escena y la animación
-    init();
-    animate();
+    initScene();
+    window.addEventListener("resize", initScene);
 
     return () => {
-      // Limpiar recursos cuando el componente se desmonta
-      if (renderer) {
-        renderer.dispose();
-      }
-      scene = null;
-      camera = null;
-      sphere = null;
+      cancelAnimationFrame(frameId);
+      if (renderer) renderer.dispose();
+      window.removeEventListener("resize", initScene);
     };
   }, []);
-  return (
-    <div id="luna-container">
-      <canvas></canvas>
-    </div>
-  );
+
+  return <div id="luna-container" className="luna" ref={containerRef}></div>;
 };
 
 export default Luna3D;

@@ -2,6 +2,9 @@ import React from "react";
 import "../Style/Footer.css";
 
 const Footer = () => {
+  const imagePath = (filename) =>
+    `${process.env.PUBLIC_URL}/Imagenes/${filename}`;
+
   const linkedinUrl = "https://www.linkedin.com/in/guiovanihernandez";
   const torreUrl =
     "https://torre.ai/guiovanihernandezsegura?column=about&r=xy4RGPyO";
@@ -21,21 +24,17 @@ const Footer = () => {
         >
           <img
             id="iconos"
-            src="./Imagenes/linkedin.svg"
+            src={imagePath("linkedin.svg")}
             width={30}
             height={30}
-            alt=""
+            alt="LinkedIn"
           />
           <span>Linkedin</span>
         </a>
       </li>
       <li id="footer_li">
-        <a
-          id="footer_a"
-          href={emailAddress} // Usar "mailto:" para abrir el cliente de correo
-          rel="noopener noreferrer"
-        >
-          <img id="iconos_1" src="./Imagenes/email.svg" alt="" />
+        <a id="footer_a" href={emailAddress} rel="noopener noreferrer">
+          <img id="iconos_1" src={imagePath("email.svg")} alt="Email" />
           <span>Email</span>
         </a>
       </li>
@@ -46,7 +45,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="iconos_1" src="./Imagenes/torre.svg" alt="" />
+          <img id="iconos_1" src={imagePath("torre.svg")} alt="Torre" />
           <span>Torre</span>
         </a>
       </li>
@@ -57,7 +56,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="iconos_1" src="./Imagenes/github.svg" alt="" />
+          <img id="iconos_1" src={imagePath("github.svg")} alt="GitHub" />
           <span>GitHub</span>
         </a>
       </li>
@@ -68,7 +67,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img id="iconos_1" src="./Imagenes/whatsapp.svg" alt="" />
+          <img id="iconos_1" src={imagePath("whatsapp.svg")} alt="WhatsApp" />
           <span>Whatsapp</span>
         </a>
       </li>

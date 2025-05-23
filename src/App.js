@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Inicio from "./Pages/Inicio";
 import Proyectos from "./Pages/Proyectos";
@@ -6,22 +7,18 @@ import Sobre from "./Pages/Sobre";
 import Tecnologias from "./Pages/Tecnologias";
 
 function App() {
-  const content = ReturnContent();
-  return <div className="App">{content}</div>;
+  return (
+    <Router basename="/portafolio">
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/Sobre" element={<Sobre />} />
+          <Route path="/Proyectos" element={<Proyectos />} />
+          <Route path="/Tecnologias" element={<Tecnologias />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-function ReturnContent() {
-  const url = window.location.pathname;
-  //console.log(url);
-  switch (url) {
-    case "/Sobre":
-      return <Sobre />;
-    case "/Proyectos":
-      return <Proyectos />;
-    case "/Tecnologias":
-      return <Tecnologias />;
-    default:
-      return <Inicio />;
-  }
-}
 export default App;

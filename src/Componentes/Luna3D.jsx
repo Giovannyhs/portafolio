@@ -22,7 +22,10 @@ const Luna3D = () => {
       container.innerHTML = "";
       container.appendChild(renderer.domElement);
 
-      const texture = new THREE.TextureLoader().load("/Imagenes/luna.svg");
+      const texture = new THREE.TextureLoader().load(
+        `${process.env.PUBLIC_URL}/Imagenes/luna.svg`
+      );
+
       const geometry = new THREE.SphereGeometry(1, 32, 32);
       const material = new THREE.MeshBasicMaterial({
         map: texture,

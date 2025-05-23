@@ -6,6 +6,9 @@ import Footer from "../Componentes/Footer";
 import "../Style/Inicio.css";
 
 function Inicio() {
+  const imagePath = (filename) =>
+    `${process.env.PUBLIC_URL}/Imagenes/${filename}`;
+
   return (
     <div
       className="Inicio_container"
@@ -16,7 +19,11 @@ function Inicio() {
       <Luna />
 
       <div className="inicio">
-        <img className="foto" src="./Imagenes/foto.jpg" alt="" />
+        <img
+          className="foto"
+          src={imagePath("foto.jpg")}
+          alt="Foto de Guiovani"
+        />
         <h2 className="saludo_1">
           HOLA, SOY GUIOVANI HERNANDEZ <br />
           DESARROLLADOR FRONTEND

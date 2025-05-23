@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../Style/Header.css";
 
 const Header = () => {
@@ -8,9 +9,12 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const imagePath = (filename) =>
+    `${process.env.PUBLIC_URL}/Imagenes/${filename}`;
+
   return (
     <div>
-      <img className="logo" src="./Imagenes/logo.svg" alt="" />
+      <img className="logo" src={imagePath("logo.svg")} alt="Logo" />
       <div
         className={`menu-toggle ${isOpen ? "open" : ""}`}
         onClick={toggleMenu}
@@ -21,28 +25,40 @@ const Header = () => {
       </div>
       <ul className={`header ${isOpen ? "open" : ""}`}>
         <li className="header_li">
-          <a className="header_a" href="/Inicio">
-            <img className="iconos" src="./Imagenes/home.svg" alt="" />
+          <Link className="header_a" to="/">
+            <img className="iconos" src={imagePath("home.svg")} alt="Inicio" />
             <span>INICIO</span>
-          </a>
+          </Link>
         </li>
         <li className="header_li">
-          <a className="header_a" href="/Sobre">
-            <img className="iconos" src="./Imagenes/about.svg" alt="" />
+          <Link className="header_a" to="/Sobre">
+            <img
+              className="iconos"
+              src={imagePath("about.svg")}
+              alt="Sobre mí"
+            />
             <span>SOBRE MI</span>
-          </a>
+          </Link>
         </li>
         <li className="header_li">
-          <a className="header_a" href="/Tecnologias">
-            <img className="iconos" src="./Imagenes/tecnologias.svg" alt="" />
+          <Link className="header_a" to="/Tecnologias">
+            <img
+              className="iconos"
+              src={imagePath("tecnologias.svg")}
+              alt="Tecnologías"
+            />
             <span>TECNOLOGIAS</span>
-          </a>
+          </Link>
         </li>
         <li className="header_li">
-          <a className="header_a" href="/Proyectos">
-            <img className="iconos" src="./Imagenes/proyectos.svg" alt="" />
+          <Link className="header_a" to="/Proyectos">
+            <img
+              className="iconos"
+              src={imagePath("proyectos.svg")}
+              alt="Proyectos"
+            />
             <span>PROYECTOS</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
